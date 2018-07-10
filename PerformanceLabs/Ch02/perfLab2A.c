@@ -22,7 +22,7 @@ int main(void)
 
     //print each variable and its size
     printf("My integer is %d and is %d BYTES \n", integer, sizeof(integer));
-    printf("My float is %.2f and is %d BYTES \n", singlePrecision, sizeof(singlePrecision));
+    printf("My float is %.f and is %d BYTES \n", singlePrecision, sizeof(singlePrecision));
     printf("My double is %.15g and is %d BYTES \n", doublePrecision, sizeof(doublePrecision));
     printf("My character is %c and is %d BYTE \n", singleCharacter, sizeof(singleCharacter));
 
