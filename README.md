@@ -8,4 +8,4 @@
 * [**Demolabs**](./DemoLabs/)
   * [DLab1 - Variables/Data Types](./DemoLabs/DLab1.c)
   * [DLab2 - Variables and Sizes](./DemoLabs/DLab2.c)
-  * [Dlab3 - Variable Type Casting](./DLab3.c)
+  * [Dlab3 - Variable Type Casting](./DemoLabs/DLab3.c)
