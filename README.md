@@ -1,11 +1,5 @@
-# CProgramming is Fun!
+# **CProgramming is Fun!**
+# **Table of Contents**
+* [**Demolabs**](./DemoLabs/)
+  * [DLab1 - Variables/Data Types](./DemoLabs/DLab1.c)
 
-Hi everyone
-
-**BOLD STUFF**
-
-*Fancy Text*
-
-* Bullet
-  * Sub Bullet
-    * \* Star with esc char
