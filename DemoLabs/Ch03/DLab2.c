@@ -15,6 +15,7 @@ int main(void)
 	printf("My favorite word is %s \n", myFavoriteWord);
 	
 	getchar();
-	return;
+    
+	return 0;
 	
 }
