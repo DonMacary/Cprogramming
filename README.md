@@ -10,6 +10,7 @@
     * [Performance Lab 3B - Strings](./PerformanceLabs/Ch03/perfLab3B.c)
   * [Chapter 04 - Print and Scan](./PerformanceLabs/Ch04)
     * [Performance lab 4A - Basic IO Pt1](./PerformanceLabs/Ch04/perfLab4A.c)
+    * [Performance lab 4B - Basic IO Pt2](./PerformanceLabs/Ch04/perfLab4B.c)
 * [**Demolabs**](./DemoLabs/)
   * [Chapter 02 - Variables](./DemoLabs/Ch02)
     * [DLab1 - Variables/Data Types](./DemoLabs/Ch02/DLab1.c)
