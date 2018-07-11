@@ -6,5 +6,6 @@
     * [Performance Lab 2 B - Performance Lab 2B - Type Casting](./Ch02/perfLab2B.c)
 * [Chapter 03 - Array Strings](./Ch03)
     * [Performance Lab 3A - Arrays](./Ch03/perfLab3A.c)
+    * [Performance Lab 3B - Strings](./Ch03/perfLab3B.c)
 
 
