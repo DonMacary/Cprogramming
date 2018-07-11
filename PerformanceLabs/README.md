@@ -7,5 +7,8 @@
 * [Chapter 03 - Array Strings](./Ch03)
     * [Performance Lab 3A - Arrays](./Ch03/perfLab3A.c)
     * [Performance Lab 3B - Strings](./Ch03/perfLab3B.c)
+* [Chapter 04 - Print and Scan](./Ch04)
+    * [Performance lab 4A - Basic IO Pt1](./Ch04/perfLab4A.c)
+    
 
 

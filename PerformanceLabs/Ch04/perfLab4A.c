@@ -1,8 +1,8 @@
 /*********************************************************************
 /   AUTHOR: ELF
 /   COURSE: C Programming 
-/   PROGRAM NAME: perfLab3B.c
-/   PROGRAM DESCRIPTION: Performance Lab 3B - Strings
+/   PROGRAM NAME: perfLab4A.c
+/   PROGRAM DESCRIPTION: Performance Lab 4A - Basic IO pt 1
 /   INSTRUCTIONS:
 /        Input a single character and then print the next sequential character
 /        Use getchar() and putchar()
