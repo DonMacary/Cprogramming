@@ -3,6 +3,20 @@
 /   COURSE: C Programming 
 /   PROGRAM NAME: perfLab2B.c
 /   PROGRAM DESCRIPTION: Performance Lab 2B - Type Casting
+/   Instructions:
+/       Declare and initialize variables of data types:
+/            int
+/            float
+/            double
+/            char
+/       Type cast and print the following:
+/           int -> float
+/           int -> char
+/           float -> double
+/           double -> float
+/           char -> int
+/           33 -> char
+/       Note: Initialize int to a value between 32 and 126
 *********************************************************************/
 
 #include <stdio.h>

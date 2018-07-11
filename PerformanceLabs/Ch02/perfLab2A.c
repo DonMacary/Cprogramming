@@ -3,6 +3,13 @@
 /   COURSE: C Programming 
 /   PROGRAM NAME: perfLab2A.c
 /   PROGRAM DESCRIPTION: Performance Lab 2A - Declaring and Initializing Variables
+/   Instructions: 
+/       In this lab, you will declare and initialize variables of the following types:
+/           int
+/           float
+/           double
+/           char
+/       Then print the variables and their sizes.
 *********************************************************************/
 #include <stdio.h>
 
