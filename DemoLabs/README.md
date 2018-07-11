@@ -8,4 +8,10 @@
 * [Chapter 03 - Array Strings](./Ch03)
     * [Dlab1 - Arrays](./Ch03/DLab1.c)
     * [Dlab2 - Strings](./Ch03/DLab2.c)
-
+* [Chapter 04 - Print and Scan](./Ch04)
+    * [Demo Lab 1 - Basic IO](./Ch04/Basic_IO.c)
+    * [Demo Lab 2 - Basic IO 2](./Ch04/Basic_IO_2.c)
+    * [Demo Lab 3 - Date](./Ch04/date.c)
+    * [Demo Lab 4 - Formatted IO](./Ch04/Formatted_IO.c)
+    * [Demo Lab 5 - Formatted IO 2](./Ch04/Formatted_IO_2.c)
+    * [Demo Lab 6 - String IO](./Ch04/String_IO.c)
