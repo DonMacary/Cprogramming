@@ -15,3 +15,6 @@
     * [Demo Lab 4 - Formatted IO](./Ch04/Formatted_IO.c)
     * [Demo Lab 5 - Formatted IO 2](./Ch04/Formatted_IO_2.c)
     * [Demo Lab 6 - String IO](./Ch04/String_IO.c)
+* [Chapter 05 - Operators and Expressions](./Ch05_operators_expressions)
+    * [Demo Lab 1 - Pythagoras](./Ch05_operators_expressions/Pythagoras.c)
+    * [Demo Lab 2 - Pythagoras with Error Checking](./Ch05_operators_expressions/Pythagoras_w_errchk.c)

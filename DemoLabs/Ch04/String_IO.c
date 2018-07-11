@@ -2,7 +2,7 @@
 
 int main(void)
 {
-	char buff[4];
+	char buff[10];
 	printf("Enter a string:      ");
 	fgets(buff, sizeof(buff), stdin);
 	printf("Your string was:  ");
