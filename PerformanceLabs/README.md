@@ -10,6 +10,6 @@
 * [Chapter 04 - Print and Scan](./Ch04)
     * [Performance lab 4A - Basic IO Pt1](./Ch04/perfLab4A.c)
     * [Performance lab 4B - Basic IO Pt2](./Ch04/perfLab4B.c)
-    
+    * [Performance lab 4D - Scanf](./Ch04/perfLab4D.c)
 
 
