@@ -11,5 +11,8 @@
     * [Performance lab 4A - Basic IO Pt1](./Ch04/perfLab4A.c)
     * [Performance lab 4B - Basic IO Pt2](./Ch04/perfLab4B.c)
     * [Performance lab 4D - Scanf](./Ch04/perfLab4D.c)
+* [Chapter 05 - Operators and Expressions](./Ch05)
+    * [Performance lab 5A - Operators and Expressions](./Ch05/perfLab5A.c)
+    
 
 
