@@ -1,0 +1,6 @@
+/*///THREE OR MORE? USE A FOR!///
+This lab is more of a thought experiment...
+Looking back, what previous labs could have benefited from a 
+FOR loop? Were there...arrays to manipulate?...repetitious calculations...
+and or places where code was copy-pasta?*/
+

@@ -13,6 +13,13 @@
     * [Performance lab 4D - Scanf](./Ch04/perfLab4D.c)
 * [Chapter 05 - Operators and Expressions](./Ch05)
     * [Performance lab 5A - Operators and Expressions](./Ch05/perfLab5A.c)
-    
-
+* [Chapter06-BitwiseOperations](./Ch06-BitwiseOperations)
+	* [Capston Project - Shift Single Bit](./Ch06-BitwiseOperations/capstone.c)
+	* [Performance lab 6A - Left Shift](./Ch06-BitwiseOperations/perfLab6A.c)
+* [Chapter 07 - Control Flow](./Ch07_Control_Flow)
+	* [Performance lab 7.2A - If Statements](./Ch07_Control_Flow/perfLab7-2A.c)
+	* [Performance lab 7.2B - If Else Statements](./Ch07_Control_Flow/perfLab7-2B.c)
+	* [Performance lab 7.2C - Else if Statements](./Ch07_Control_Flow/perfLab7-2C.c)
+	* [Performance lab 7.2D - Switch Statements](./Ch07_Control_Flow/perfLab7-2D.c)
+	* [Performance lab 7.3A - For loops](./Ch07_Control_Flow/perfLab7-3A.c)
 

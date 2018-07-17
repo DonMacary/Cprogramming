@@ -15,17 +15,26 @@
 /*********************************************************************/
 
 #include <stdio.h>
+#include <inttypes.h>
+int binary(uint32_t);
 
 int main (void)
 {
-    __uint32_t userInt;
-    __uint32_t bitChecker = 1;
-    printf("Please type an integer: ");
-    fscanf(stdin, "%u", &userInt);
-    printf("Your integer is %u (0x%.8X in hex)\n", userInt, userInt);
-    
+	
+	 uint32_t userInt;
+	 uint32_t bitChecker = 1;
+	 printf("Please type an integer: ");
+	 fscanf(stdin, "%u", &userInt);
+	 printf("Your integer is %u (0x%.8X in hex)\n", userInt, userInt);
+	 binary(userInt);
+	 
+}
 
-
-
-
+int binary(uint32_t num)
+{
+	printf("This number in binary is ");
+	unsigned i;
+	for (i = 1 << (sizeof(num) * 8) - 1; i > 0; i = i / 2)
+		(num & i) ? printf("1") : printf("0");
+	printf("\n");
 }
