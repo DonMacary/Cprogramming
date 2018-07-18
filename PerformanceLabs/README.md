@@ -24,5 +24,11 @@
 	* [Performance lab 7.3A - For loops](./Ch07_Control_Flow/perfLab7-3A.c)
     * [Performance lab 7.4A - Breaks and Continue](./Ch07_Control_Flow/perfLab7-4A.c)
     * [Performance lab 7.5A - Nested Control Flow](./Ch07_Control_Flow/perfLab7-5A.c)
+* [Chapter 08 - Functions](./Ch08_Functions)
+    * [Performance lab 8A - Functions](./Ch08_Functions/perfLab8A.c)
+    * [Performance lab 8B - Headers](./Ch08_Functions/perfLab8B)
+      * [Performance lab 8B - Headers](./Ch08_Functions/perfLab8B/perfLab8B.c)
+      * [Performance lab 8A - HeaderFile](./Ch08_Functions/perfLab8B/MyStringHeader.h)
+      * [Performance lab 8A - HeaderSource](./Ch08_Functions/perfLab8B/MyStringHeader.c)
 
 
