@@ -59,9 +59,9 @@
     * [7.2 Demo 4 - Switch Statement](./DemoLabs/Ch07_Control_Flow/7.2_demo4.c)
     * [7.3 Demo 1 - Blank](./DemoLabs/Ch07_Control_Flow/7.3_demo1.c)
     * [7.4 Demo 1 - Blank](./DemoLabs/Ch07_Control_Flow/7.4_demo1.c)
-  * [Chapter 08 - Functions](./Ch08_Functions)
-    * [Chapter 08 - Header File](./Ch08_Functions/MyStringHeader.h)
-    * [Chapter 08 - Header Source](./Ch08_Functions/MyStringHeader.c)
-    * [Chapter 08 - Main Code](./Ch08_Functions/string_theory.c)
+  * [Chapter 08 - Functions](./DemoLabs/Ch08_Functions)
+    * [Chapter 08 - Header File](./DemoLabs/Ch08_Functions/MyStringHeader.h)
+    * [Chapter 08 - Header Source](./DemoLabs/Ch08_Functions/MyStringHeader.c)
+    * [Chapter 08 - Main Code](./DemoLabs/Ch08_Functions/string_theory.c)
   
 
