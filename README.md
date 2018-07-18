@@ -23,6 +23,8 @@
 	* [Performance lab 7.2C - Else if Statements](./PerformanceLabs/Ch07_Control_Flow/perfLab7-2C.c)
 	* [Performance lab 7.2D - Switch Statements](./PerformanceLabs/Ch07_Control_Flow/perfLab7-2D.c)
 	* [Performance lab 7.3A - For loops](./PerformanceLabs/Ch07_Control_Flow/perfLab7-3A.c)
+  * [Performance lab 7.4A - Breaks and Continue](./PerformanceLabs/Ch07_Control_Flow/perfLab7-4A.c)
+  * [Performance lab 7.5A - Nested Control Flow](./PerformanceLabs/Ch07_Control_Flow/perfLab7-5A.c)
 * [**Demolabs**](./DemoLabs/)
   * [Chapter 02 - Variables](./DemoLabs/Ch02)
     * [DLab1 - Variables/Data Types](./DemoLabs/Ch02/DLab1.c)

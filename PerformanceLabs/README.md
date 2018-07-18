@@ -22,4 +22,7 @@
 	* [Performance lab 7.2C - Else if Statements](./Ch07_Control_Flow/perfLab7-2C.c)
 	* [Performance lab 7.2D - Switch Statements](./Ch07_Control_Flow/perfLab7-2D.c)
 	* [Performance lab 7.3A - For loops](./Ch07_Control_Flow/perfLab7-3A.c)
+    * [Performance lab 7.4A - Breaks and Continue](./Ch07_Control_Flow/perfLab7-4A.c)
+    * [Performance lab 7.5A - Nested Control Flow](./Ch07_Control_Flow/perfLab7-5A.c)
+
 
