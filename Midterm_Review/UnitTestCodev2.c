@@ -560,7 +560,7 @@ int main(void)
 
 	const char * autoFullProgramTestArray[] = { autoFullProgramTest1, autoFullProgramTest2, autoFullProgramTest3, autoFullProgramTest4, autoFullProgramTest5, autoFullProgramTest6, autoFullProgramTest7, autoFullProgramTest8 };
 
-	const int autoFullProgramRemoveNonLetterReturnValues[] = { 5, 1, 1, 14, 1, 10, -1, 2 };
+	const int autoFullProgramRemoveNonLetterReturnValues[] = { 5, 1, 1, 14, 1, 9, -1, 2 };
 	const int autoFullProgramClearBufferReturnValues[] = { 0, 0, 0, 0, 0, 0, -1, 0 };
 
 	const char autoFullProgramResult1[BUFF_SIZE] = { "gnirtstsetasisihT" };

@@ -25,7 +25,20 @@
 */
 int is_it_alphabet(signed char inputChar)
 {
-	return 90;		//You will want to change this;
+	//check if the character is a lower case letter a-z
+	if (inputChar >= 65 && inputChar <= 90)
+	{
+		return 1;
+	}
+	//check if the character is an upper case letter A-Z
+	else if (inputChar >= 97 && inputChar <= 122)
+	{
+		return 1;
+	}
+	//if it is not a letter thhen return 0
+	else {
+		return 0;
+	}
 }
 
 
@@ -45,7 +58,27 @@ int is_it_alphabet(signed char inputChar)
 */
 int remove_non_letters(char * sentenceString)
 {
-	return 90; // You'll want to change this
+	int counter = 0; //counts how many characters are removed
+	int i = 0; 
+
+	if (sentenceString == '\0')
+	{
+		return -1;
+	}
+	while (sentenceString[i] != '\0')
+	{
+		if (is_it_alphabet(sentenceString[i]) == 0)
+		{
+			memmove(&sentenceString[i], &sentenceString[i + 1], strlen(sentenceString) - i);
+			counter++;
+		}
+		else
+		{
+			i++;
+		}
+	}		
+	return counter;
+	
 }
 
 
@@ -91,7 +124,32 @@ int remove_non_letters(char * sentenceString)
 */
 int reverse_string(char * inputString, char * outputBuff, int inputPosition)
 {
-	return 90;		//You will want to change this
+	int counter = 0;
+	if (inputString == '\0' || outputBuff == '\0')
+	{
+		return -1;
+	}
+	else if (inputPosition < 0 || inputPosition >= strlen(inputString))
+	{
+		return -2;
+	}
+	else
+	{
+		for (int i = 0; i < strlen(inputString); i++)
+		{
+			if (strlen(inputString) - i > inputPosition)
+			{
+				outputBuff[i] = inputString[strlen(inputString) - i - 1];
+				counter++;
+			}
+			else
+			{
+				outputBuff[i] = '\0';
+			}
+
+		}
+	}
+	return counter;
 }
 
 
@@ -114,5 +172,19 @@ int reverse_string(char * inputString, char * outputBuff, int inputPosition)
 */
 int clear_a_buffer(char * fullBuff, int buffSize)
 {
-	return 90;		//You will want to change this
+	if (fullBuff == '\0')
+	{
+		return -1;
+	}
+	if (buffSize <= 0)
+	{
+		return -2;
+	}
+
+	for (int i = 0; i < buffSize; i++)
+	{
+		fullBuff[i] = 0;
+	}
+	return 0;
+	
 }
