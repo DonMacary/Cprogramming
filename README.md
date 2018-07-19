@@ -66,9 +66,9 @@
     * [Chapter 08 - Main Code](./DemoLabs/Ch08_Functions/string_theory.c)
     * [Chapter 08 - Fibonacci Iterative](./DemoLabs/Ch08_Functions/fibonacci_iterative.c)
     * [Chapter 08 - Fibonacci Recursive](./DemoLabs/Ch08_Functions/fibonacci_recursive.c)
-  * [**MidTerm Review Lab**](./Midterm_Review/)
-    * [Header File](./Midterm_Review/EnglishFunctions.h)
-    * [Source File](./Midterm_Review/EnglishFunctions.c)
-    * [Testing and Run File](./Midterm_Review/UnitTestCodev2.c)
-  
+* [**MidTerm Review Lab**](./Midterm_Review/)
+  * [Header File](./Midterm_Review/EnglishFunctions.h)
+  * [Source File](./Midterm_Review/EnglishFunctions.c)
+  * [Testing and Run File](./Midterm_Review/UnitTestCodev2.c)
+
 
