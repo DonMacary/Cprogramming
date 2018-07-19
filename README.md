@@ -31,6 +31,7 @@
       * [Performance lab 8B - Headers](./PerformanceLabs/Ch08_Functions/perfLab8B/perfLab8B.c)
       * [Performance lab 8A - HeaderFile](./PerformanceLabs/Ch08_Functions/perfLab8B/MyStringHeader.h)
       * [Performance lab 8A - HeaderSource](./PerformanceLabs/Ch08_Functions/perfLab8B/MyStringHeader.c)
+    * [Performance lab 8C - Recursion](./PerformanceLabs/Ch08_Functions/perfLab8C/perfLab8C.c)
 * [**Demolabs**](./DemoLabs/)
   * [Chapter 02 - Variables](./DemoLabs/Ch02)
     * [DLab1 - Variables/Data Types](./DemoLabs/Ch02/DLab1.c)
@@ -63,5 +64,11 @@
     * [Chapter 08 - Header File](./DemoLabs/Ch08_Functions/MyStringHeader.h)
     * [Chapter 08 - Header Source](./DemoLabs/Ch08_Functions/MyStringHeader.c)
     * [Chapter 08 - Main Code](./DemoLabs/Ch08_Functions/string_theory.c)
+    * [Chapter 08 - Fibonacci Iterative](./DemoLabs/Ch08_Functions/fibonacci_iterative.c)
+    * [Chapter 08 - Fibonacci Recursive](./DemoLabs/Ch08_Functions/fibonacci_recursive.c)
+  * [**MidTerm Review Lab**](./Midterm_Review/)
+    * [Header File](./Midterm_Review/EnglishFunctions.h)
+    * [Source File](./Midterm_Review/EnglishFunctions.c)
+    * [Testing and Run File](./Midterm_Review/UnitTestCodev2.c)
   
 

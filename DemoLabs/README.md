@@ -33,6 +33,9 @@
     * [Chapter 08 - Header File](./Ch08_Functions/MyStringHeader.h)
     * [Chapter 08 - Header Source](./Ch08_Functions/MyStringHeader.c)
     * [Chapter 08 - Main Code](./Ch08_Functions/string_theory.c)
+    * [Chapter 08 - Fibonacci Iterative](./Ch08_Functions/fibonacci_iterative.c)
+    * [Chapter 08 - Fibonacci Recursive](./Ch08_Functions/fibonacci_recursive.c)
+
 
 
 	

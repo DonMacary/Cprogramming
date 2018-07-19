@@ -30,5 +30,4 @@
       * [Performance lab 8B - Headers](./Ch08_Functions/perfLab8B/perfLab8B.c)
       * [Performance lab 8A - HeaderFile](./Ch08_Functions/perfLab8B/MyStringHeader.h)
       * [Performance lab 8A - HeaderSource](./Ch08_Functions/perfLab8B/MyStringHeader.c)
-
-
+    * [Performance lab 8C - Recursion](./Ch08_Functions/perfLab8C/perfLab8C.c)

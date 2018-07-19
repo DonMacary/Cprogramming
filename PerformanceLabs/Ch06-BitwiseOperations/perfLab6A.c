@@ -20,7 +20,7 @@ int binary(uint32_t);
 
 int main (void)
 {
-	
+	//THIS WAS NOT COMPLETED!!!!
 	 uint32_t userInt;
 	 uint32_t bitChecker = 1;
 	 printf("Please type an integer: ");
