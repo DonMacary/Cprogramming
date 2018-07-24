@@ -35,8 +35,15 @@
     * [Chapter 08 - Main Code](./Ch08_Functions/string_theory.c)
     * [Chapter 08 - Fibonacci Iterative](./Ch08_Functions/fibonacci_iterative.c)
     * [Chapter 08 - Fibonacci Recursive](./Ch08_Functions/fibonacci_recursive.c)
-
-
+* [Chapter 09 - C Compiler](./Ch09_c_compiler)
+    * [Demo Lab - 9.3_demolab1.md](./Ch09_c_compiler/9.3_demolab1.md)
+    * [Demo Lab - addnums.c](./Ch09_c_compiler/addnums.c)
+    * [Demo Lab - addnums.i](./Ch09_c_compiler/addnums.i)
+    * [Demo Lab - addnums.obj](./Ch09_c_compiler/addnums.obj)
+    * [Demo Lab - demo_compile.asm](./Ch09_c_compiler/demo_compile.asm)
+    * [Demo Lab - demo_compile.c](./Ch09_c_compiler/demo_compile.c)
+    * [Demo Lab - demo_compile.i](./Ch09_c_compiler/demo_compile.i)
+    * [Demo Lab - demo_compile.obj](./Ch09_c_compiler/demo_compile.obj)
 
 	
 
