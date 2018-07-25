@@ -1,0 +1,11 @@
+1. You will be provided with mostly finished code. You will need to finish the function find_the_word. Do not touch the main()!
+2. This lab is very simular to the demo lab just shown.
+3. The purpose of this lab is to find the string (searchWord_ptr) inside of (sentence_ptr) and return a pointer to the first occurance of searchWord
+4. find_the_word has 3 paramaters: sentence_ptr, searchWord_ptr and errorCode_ptr
+-sentence_ptr is a char pointer to a null terminated string in main that we will search (haystack)
+-searchWord_ptr is a char pointer to a null terminated string in main that we will find (needle)
+-errorCode_ptr is a int memory address to store an error code
+5. You will return a char pointer to the first occurrence of searchWord (if the whole thing exists)
+6. In all other cases (NULL pointers, errors, word not found, etc) you will return NULL
+7. You may ONLY use address arithmetic to access sentence_ptr and searchWord_ptr
+8. Assign your error code to the memory address found in errorCode_ptr (error codes are defined at the top)
