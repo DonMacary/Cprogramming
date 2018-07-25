@@ -67,30 +67,30 @@
 #define NUM_TEST_STRINGS 19
 
 /*
- * FUNCTION:   char * split_the_string(char * string_ptr, char delimiter)
- *
- * ARGUMENTS:  string_ptr is a null-terminated string that may or may not contain a delimiting
- *                 character (see: delimiter) that logically separates two phrases to be "split"
- *             delimiter is the character that logically separates the two phrases that may be
- *                 in the null-terminated char array found at string_ptr
- *
- * RETURNS:	   char pointer to the first element of the second (null-terminated) phrase on success
- *             ERROR_NULL_POINTER if string_ptr is NULL
- *             ERROR_NULL_DELIMITER if delimiter is '\0' (0x0)
- *             ERROR_ABUNDANT_DELIMITER if string_ptr has more than one occurrence of delimiter
- *             string_ptr if delimiter is not found
- *
- * NOTES:      This function only utilizes address arithmetic to access information within the
- *                 null-terminated char array found at string_ptr
- *             Only access elements of the char array found at string_ptr using address arithmetic
- *                 (AKA pointer math).  The definition of this function should be entirely devoid
- *                 of the [ and ] characters.  (e.g., string_ptr[i] is forbidden)
- *             The only guarantee for the arguments is that string_ptr is null-terminated
- *             There is no guarantee it has a delimiter (return string_ptr if not)
- *             There is no guarantee it only has one delimiter if there is one (return ERROR_ABUNDANT_DELIMITER if not)
- *             There is no guarantee the delimiter is some char *other* than '\0' (return ERROR_NULL_DELIMITER if not)
- *             There is no guarantee that string_ptr has an address (return ERROR_NULL_POINTER if NULL)
- */
+* FUNCTION:   char * split_the_string(char * string_ptr, char delimiter)
+*
+* ARGUMENTS:  string_ptr is a null-terminated string that may or may not contain a delimiting
+*                 character (see: delimiter) that logically separates two phrases to be "split"
+*             delimiter is the character that logically separates the two phrases that may be
+*                 in the null-terminated char array found at string_ptr
+*
+* RETURNS:	   char pointer to the first element of the second (null-terminated) phrase on success
+*             ERROR_NULL_POINTER if string_ptr is NULL
+*             ERROR_NULL_DELIMITER if delimiter is '\0' (0x0)
+*             ERROR_ABUNDANT_DELIMITER if string_ptr has more than one occurrence of delimiter
+*             string_ptr if delimiter is not found
+*
+* NOTES:      This function only utilizes address arithmetic to access information within the
+*                 null-terminated char array found at string_ptr
+*             Only access elements of the char array found at string_ptr using address arithmetic
+*                 (AKA pointer math).  The definition of this function should be entirely devoid
+*                 of the [ and ] characters.  (e.g., string_ptr[i] is forbidden)
+*             The only guarantee for the arguments is that string_ptr is null-terminated
+*             There is no guarantee it has a delimiter (return string_ptr if not)
+*             There is no guarantee it only has one delimiter if there is one (return ERROR_ABUNDANT_DELIMITER if not)
+*             There is no guarantee the delimiter is some char *other* than '\0' (return ERROR_NULL_DELIMITER if not)
+*             There is no guarantee that string_ptr has an address (return ERROR_NULL_POINTER if NULL)
+*/
 char * split_the_string(char * string_ptr, char delimiter);
 
 int main(void)
@@ -103,49 +103,49 @@ int main(void)
 	int thereWasAnErrorCode = FALSE;		// Boolean representation that one of the #defined ERROR_* codes were returned
 	int thereShouldBeAnErrorCode = FALSE;	// Boolean representation that one of the #defined ERROR_* codes should be returned
 
-	//////////////////////////////////
-	// INPUT STRINGS
-	//////////////////////////////////
-	/*
-	 *  Normal input
-	 *  Two examples each of special characters, letters, and non-printable
-	 *      characters as delimiters
-	 */
+											//////////////////////////////////
+											// INPUT STRINGS
+											//////////////////////////////////
+											/*
+											*  Normal input
+											*  Two examples each of special characters, letters, and non-printable
+											*      characters as delimiters
+											*/
 	char inputString0[] = { "Integer/Float" };	// Delimiter = 0x2F
 	char inputString1[] = { "aeiou" };			// Delimiter = 0x69
 	char inputString2[] = { "First phrase&Second phrase" };	// Delimiter = 0xA
 	inputString2[12] = 10; // Manually setting delimiter
-	char inputString3[] = {"C programming uses the & character to determine the address of something."}; // Delimite = 0x26
+	char inputString3[] = { "C programming uses the & character to determine the address of something." }; // Delimite = 0x26
 	char inputString4[] = { "Bust A Move" }; // Delimiter = 0x41
 	char inputString5[] = { "Alexander Graham was a Scottish-born scientist, inventor, engineer and innovator who is credited with patenting the first practical telephone." }; // Delimiter = 0x7
 	inputString5[16] = 7; // Manually setting delimiter
-	/*
-	 *  No delimiters found
-	 *  Two examples
-	 */
+						  /*
+						  *  No delimiters found
+						  *  Two examples
+						  */
 	char inputString6[] = { "This string does not have any delimiters." }; // Delimiter = 0x5A
 	char inputString7[] = { "!@#$%^&*()_+" }; // Delimiter = 0x20
-	/*
-	 *  Null pointers
-	 *  Two examples
-	 */
+											  /*
+											  *  Null pointers
+											  *  Two examples
+											  */
 	char * inputString8 = NULL; // Delimiter doesn't matter
 	char * inputString9 = NULL; // Delimiter doesn't matter
-	/*
-	 *  Extra delimiters
-	 *  Two examples each of two, 10, and many delimiters
-	 */
+								/*
+								*  Extra delimiters
+								*  Two examples each of two, 10, and many delimiters
+								*/
 	char inputString10[] = { "This uses spaces." }; // Delimiter = 0x20
 	char inputString11[] = { "Fandango" }; // Delimiter = 0x61
 	char inputString12[] = { "This-string-uses-dashes-as-delimiters.  They-were-selected-by-Hark." }; // Delimiter = 0x2D
 	char inputString13[22] = { "a b c d e f g h i j k" }; // Delimiter = 0xD
-	for (i = 1; i <= 20; i+= 2)
+	for (i = 1; i <= 20; i += 2)
 	{
 		inputString13[i] = 13;
 	}
 	char inputString14[] = { "The dental patient says, 'Aaaaaaaah'" }; // Delimiter = 0x61
 	char inputString15[127] = { 0 }; // Delimiter = 0x7F
-	for (i = 0; i < 126; i+=2)
+	for (i = 0; i < 126; i += 2)
 	{
 		inputString15[i] = 0x7F;							// Sets a multitude of delimiting characters
 		inputString15[i + 1] = (char)((2 * i) - i + 1); // Sets each index to it's own index number in decimal
@@ -222,7 +222,7 @@ int main(void)
 		newInputString16[i] = 0x5A;
 	}
 	newInputString16[126] = 0; // For safety
-	char newInputString17[] = { "Normal string with the null character as the deliminator" }; 
+	char newInputString17[] = { "Normal string with the null character as the deliminator" };
 	char newInputString18[] = { 0, 'W', 'h', 'o', 'o', 'p', 's', 0 };
 
 	char * newInputStringArray[NUM_TEST_STRINGS] = { \
@@ -242,25 +242,25 @@ int main(void)
 	// OUTPUT STRINGS
 	//////////////////////////////////
 	/*
-	 *  Expected output
-	 *  Parallels the input strings
-	 */
+	*  Expected output
+	*  Parallels the input strings
+	*/
 	char outputString0[] = { "Float" };	// Delimiter = /
 	char outputString1[] = { "ou" };			// Delimiter = i
 	char outputString2[] = { "Second phrase" };	// Delimiter = 0xA
 	char outputString3[] = { " character to determine the address of something." }; // Delimite = &
 	char outputString4[] = { " Move" }; // Delimiter = A
 	char outputString5[] = { "was a Scottish-born scientist, inventor, engineer and innovator who is credited with patenting the first practical telephone." }; // Delimiter = 0x7
-    /*
-	 *  No delimiters found
-	 *  Two examples
-	 */
+																																								/*
+																																								*  No delimiters found
+																																								*  Two examples
+																																								*/
 	char outputString6[] = { "This string does not have any delimiters." }; // Delimiter = Z
 	char outputString7[] = { "!@#$%^&*()_+" }; // Delimiter = 0x20
-	/*
-	*  Null pointers
-	*  Two examples
-	*/
+											   /*
+											   *  Null pointers
+											   *  Two examples
+											   */
 	char * outputString8 = ERROR_NULL_POINTER;
 	char * outputString9 = ERROR_NULL_POINTER;
 	/*
@@ -308,7 +308,7 @@ int main(void)
 		if (thereWasAnErrorCode == FALSE && thereShouldBeAnErrorCode == FALSE && secondString_ptr && outputStringArray[i]) // If both pointers are *NOT* NULL...
 		{
 			/* TEST ORIGINAL STRING WAS NEWLY NUL TERMINATED */
-//			puts(secondString_ptr); // DEBUGGING
+			//			puts(secondString_ptr); // DEBUGGING
 			printf("Original String Test:\t");
 			tempValue = strcmp(newInputStringArray[i], inputStringArray[i]);
 			numTestsRun++;
@@ -344,7 +344,7 @@ int main(void)
 		{
 			/* TEST THE ORIGINAL STRING */
 			printf("Original String Test:\t");
-			
+
 			if (newInputStringArray[i] > NULL && inputStringArray[i] > NULL)
 			{
 				tempValue = strcmp(newInputStringArray[i], inputStringArray[i]);
@@ -391,7 +391,7 @@ int main(void)
 
 			/* TEST THE NEWLY SPLIT STRING */
 			printf("Split String Test:\t");
-//			tempValue = strcmp(secondString_ptr, outputStringArray[i]); // ...then compare the two strings
+			//			tempValue = strcmp(secondString_ptr, outputStringArray[i]); // ...then compare the two strings
 			numTestsRun++;
 
 			if (secondString_ptr == outputStringArray[i]) // Otherwise, there's at least one error so if they match...
@@ -443,41 +443,87 @@ int main(void)
 			fputs("Something has gone awry with the test counter.", stderr);
 		}
 	}
-
+	while (1);
 	return 0;
 }
 
 /*
- * FUNCTION:   char * split_the_string(char * string_ptr, char delimiter)
- *
- * ARGUMENTS:  string_ptr is a null-terminated string that may or may not contain a delimiting
- *                 character (see: delimiter) that logically separates two phrases to be "split"
- *             delimiter is the character that logically separates the two phrases that may be
- *                 in the null-terminated char array found at string_ptr
- *
- * RETURNS:	   char pointer to the first element of the second (null-terminated) phrase on success
- *             ERROR_NULL_POINTER if string_ptr is NULL
- *             ERROR_NULL_DELIMITER if delimiter is '\0' (0x0)
- *             ERROR_ABUNDANT_DELIMITER if string_ptr has more than one occurrence of delimiter
- *             string_ptr if delimiter is not found
- *
- * NOTES:      This function only utilizes address arithmetic to access information within the
- *                 null-terminated char array found at string_ptr
- *             Only access elements of the char array found at string_ptr using address arithmetic
- *                 (AKA pointer math).  The definition of this function should be entirely devoid
- *                 of the [ and ] characters.  (e.g., string_ptr[i] is forbidden)
- *             The only guarantee for the arguments is that string_ptr is null-terminated
- *             There is no guarantee it has a delimiter (return string_ptr if not)
- *             There is no guarantee it only has one delimiter if there is one (return ERROR_ABUNDANT_DELIMITER if not)
- *             There is no guarantee the delimiter is some char *other* than '\0' (return ERROR_NULL_DELIMITER if not)
- *             There is no guarantee that string_ptr has an address (return ERROR_NULL_POINTER if NULL)
- */
+* FUNCTION:   char * split_the_string(char * string_ptr, char delimiter)
+*
+* ARGUMENTS:  string_ptr is a null-terminated string that may or may not contain a delimiting
+*                 character (see: delimiter) that logically separates two phrases to be "split"
+*             delimiter is the character that logically separates the two phrases that may be
+*                 in the null-terminated char array found at string_ptr
+*
+* RETURNS:	   char pointer to the first element of the second (null-terminated) phrase on success
+*             ERROR_NULL_POINTER if string_ptr is NULL
+*             ERROR_NULL_DELIMITER if delimiter is '\0' (0x0)
+*             ERROR_ABUNDANT_DELIMITER if string_ptr has more than one occurrence of delimiter
+*             string_ptr if delimiter is not found
+*
+* NOTES:      This function only utilizes address arithmetic to access information within the
+*                 null-terminated char array found at string_ptr
+*             Only access elements of the char array found at string_ptr using address arithmetic
+*                 (AKA pointer math).  The definition of this function should be entirely devoid
+*                 of the [ and ] characters.  (e.g., string_ptr[i] is forbidden)
+*             The only guarantee for the arguments is that string_ptr is null-terminated
+*             There is no guarantee it has a delimiter (return string_ptr if not)
+*             There is no guarantee it only has one delimiter if there is one (return ERROR_ABUNDANT_DELIMITER if not)
+*             There is no guarantee the delimiter is some char *other* than '\0' (return ERROR_NULL_DELIMITER if not)
+*             There is no guarantee that string_ptr has an address (return ERROR_NULL_POINTER if NULL)
+*/
 char * split_the_string(char * string_ptr, char delimiter)
 {
 
-	// YOUR CODE HERE
-	//////////////////////////////////
-	//////////////////////////////////
-	//////////////////////////////////
-	return NULL;
+	char * returnValue_ptr = NULL;
+	int countInstances = 0;
+	int delimPos = 0;
+	//if the string is null return an error
+	if (!string_ptr)
+	{
+		return ERROR_NULL_POINTER;
+	}
+	//if the delimiter is null return an error
+	else if (!delimiter)
+	{
+		return ERROR_NULL_DELIMITER;
+	}
+	//if the string has more than one instance of the delimiter, reutrn an error
+	else
+	{
+		returnValue_ptr = string_ptr;
+		//go through each element in the string and check to see if the delimiter exists - if so increase the counter
+		for (int i = 0; i < (int)strlen(string_ptr); i++)
+		{
+			//if the array at index i contains the delimiter
+			if (*(string_ptr + i) == delimiter)
+			{
+				returnValue_ptr = string_ptr + i + 1; //this makes the return value pointer point to the element after the delimiter in the string
+				countInstances++;
+				delimPos = i;	//keeps track of the position of the delimiter so we can nullify it
+
+			}
+		}
+		//if there are more than one instances of the delimiter return an error
+		if (countInstances > 1)
+		{
+			return ERROR_ABUNDANT_DELIMITER;
+		}
+		//if there is no instances of the delimiter return the string
+		else if (countInstances == 0)
+		{
+			return string_ptr;
+		}
+		//return a pointer to the address of the first instance of the delimtier in the string
+		else
+		{
+			//before returning we need to nullify the position of the delimiter on the original string
+			if (countInstances == 1)
+			{
+				*(string_ptr + delimPos) = '\0';
+			}
+			return returnValue_ptr;
+		}
+
+	}
 }

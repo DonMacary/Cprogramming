@@ -42,3 +42,6 @@
     * [Performance Lab - Student Header i](./Ch09_c_compiler/student_header.i)
     * [Performance Lab - Student Header obj](./Ch09_c_compiler/student_header.obj)
     * [Performance Lab - Student Program Executable](./Ch09_c_compiler/student_program.exe)
+* [Chapter 11 - Pointers Arrays](./Ch11_Pointers_Arrays)
+    * [Performance Lab 1 - Reference not found](./Ch11_Pointers_Arrays/ref_not_found)
+    * [Performance Lab 2 - Address Arithmetic](./Ch11_Pointers_Arrays/addr_arithmetic.c)

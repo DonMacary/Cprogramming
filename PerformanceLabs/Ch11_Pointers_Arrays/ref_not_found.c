@@ -37,10 +37,10 @@ int main(void)
 	int goodIn = 1;
 	char strInput[10];
 	/* Read user input into variable userInput */
-	printf("Enter a number: ");
-		while (goodIn == 1)
+
+	while (goodIn == 1)
 	{
-		printf("Type the integer value of the first leg: ");
+		printf("Enter a number: ");
 		//take in input using fgets
 		fgets(strInput, sizeof(strInput), stdin);
 		//convert input to an integer
@@ -57,15 +57,25 @@ int main(void)
 		else {
 			goodIn = 0;
 		}
-		
+
 
 	}
 
 	/* Ensure tempValue contains the same value as userInput utilizing one or more memory operators */
-
+	inputPtr = &userInput; //make the pointer variable = to the address of userInput
+	tempValue = *inputPtr; //make the temp value the value of whatever inputPtr is pointing to (in this case its userInput
 
 	/* Print the value *and* the pointer for each of the three variables in a human-readable format */
+	printf("Comparing the two variables now!\n");
 
+	printf("The value of userInput is: %d\n", userInput);
+	printf("The address of userInput is %p\n", &userInput);
+	printf("The value of tempValue is: %d\n", tempValue);
+	printf("The address of tempValue is %p\n", &tempValue);
+	printf("The value of inputPtr points to is: %d\n", *inputPtr);
+	printf("The value of inputPtr is %p\n", inputPtr);
+	printf("The address of inputPtr is %p\n", &inputPtr);
 
+	while (1);
 	return 0;
 }
