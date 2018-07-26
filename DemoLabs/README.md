@@ -44,6 +44,7 @@
     * [Demo Lab - demo_compile.c](./Ch09_c_compiler/demo_compile.c)
     * [Demo Lab - demo_compile.i](./Ch09_c_compiler/demo_compile.i)
     * [Demo Lab - demo_compile.obj](./Ch09_c_compiler/demo_compile.obj)
+* [Chapter 10 - Preprocessor](./Ch10_Preprocessor)
 * [Chapter 11 - Pointers Arrays](./Ch11_Pointers_Arrays)
     * [Demo Lab 1 - title not found](./Ch11_Pointers_Arrays/title_not_found.c)
     * [Demo Lab 2 - Little Integer](./Ch11_Pointers_Arrays/little_integer.c)

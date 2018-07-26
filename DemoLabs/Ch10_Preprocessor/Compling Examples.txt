@@ -1,0 +1,44 @@
+cd" C:\Users\DOT_13\Documents\Visual Studio 2015\Projects\Performance Lab I.4.a-1\Performance Lab I.4.a-1"
+vcvars32.bat
+
+
+Preprocessing:
+--------------------------------------------------------------------------------
+Create Modified Source Code (.i) from source (.c)
+
+cl /P /I "C:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\ucrt" plI4a1.c
+
+Compiling
+--------------------------------------------------------------------------------
+Create Assembly Source Code (.asm)
+cl /FA Hello_World.c
+
+cl /FA /I "C:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\ucrt" plI4a1.c
+
+
+
+Assembling
+--------------------------------------------------------------------------------
+Create Object File (.obj)
+cl /c Hello_World.c
+
+cl /c /I "C:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\ucrt" plI4a1.c
+
+Kernel Locations
+"C:\Program Files (x86)\Windows Kits\10\Lib\10.0.10586.0\um\x86"
+"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin"
+"C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\Lib\x64"
+"C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\Lib"
+
+Linking
+--------------------------------------------------------------------------------
+Create binary file (.exe)
+link  Hello_World.obj
+
+/LIBPATH:"C:\Program Files (x86)\Windows Kits\10\Lib\10.0.10586.0\um\x86"
+link
+
+
+
+
+/I "C:\Program Files (x86)\Windows Kits\10\Lib\10.0.10586.0\um\x86" /I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin" 
