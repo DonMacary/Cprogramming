@@ -48,5 +48,8 @@
 * [Chapter 11 - Pointers Arrays](./Ch11_Pointers_Arrays)
     * [Demo Lab 1 - title not found](./Ch11_Pointers_Arrays/title_not_found.c)
     * [Demo Lab 2 - Little Integer](./Ch11_Pointers_Arrays/little_integer.c)
+    * [Demo Lab 3 - By The Letter](./Ch11_Pointers_Arrays/by_the_letter.c)
+    * [Demo Lab 4 - Battleship](./Ch11_Pointers_Arrays/battleship.c)
+    * [Demo Lab 5 - Calculator - Function Pointers](./Ch11_Pointers_Arrays/fp_calculator.c)
 	
 

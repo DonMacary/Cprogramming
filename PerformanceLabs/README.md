@@ -48,3 +48,6 @@
 * [Chapter 11 - Pointers Arrays](./Ch11_Pointers_Arrays)
     * [Performance Lab 1 - Reference not found](./Ch11_Pointers_Arrays/ref_not_found)
     * [Performance Lab 2 - Address Arithmetic](./Ch11_Pointers_Arrays/addr_arithmetic.c)
+    * [Performance Lab 3 - Function Arguments](./Ch11_Pointers_Arrays/surfin_bird_student_code.c)
+    * [Performance Lab 3 - Function Arguments - Instructor Solution](./Ch11_Pointers_Arrays/surfin_bird.c)
+    * [Performance Lab 4 - Multi Dimensional Arrays - Tic Tac Toe](./Ch11_Pointers_Arrays/tic_tac_toe.c)
