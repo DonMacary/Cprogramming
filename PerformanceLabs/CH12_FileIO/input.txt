@@ -1,0 +1,4 @@
+Hello everyone!!!
+My name is Donnie!
+I am testing reading from a file and writing to a new file!!
+Lets see how this works!
