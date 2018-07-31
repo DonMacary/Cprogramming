@@ -16,14 +16,14 @@
 
 
 		* Append each name to a “class roster” file in the following format:
-		* For George Herbert Dubya Bush, write the following to the the file...George H. Dubya Bush has a username of ghdbush.
-
+		* For George Herbert Dubya Bush, write the following to the s
 		### BUILD THOSE SAFETY CHECKS!!!!!
 
 **********************************************************************************************************************/
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #define MAX_BUFFER 64
 
 int main(void)
@@ -83,14 +83,14 @@ int main(void)
 				}
 			}
 			goodStrInput = 0;
-			char middleInit[2] = 0;
+			char middleName[MAX_BUFFER] = { 0 };
 
 			//this loop checks to make sure the user inputs a good, null terminated string... Mainly to check if they didnt put too many characters which could overwrite the null terminator
 			while (goodStrInput == 0)
 			{
-				printf("Please enter the middle initial of the student you would like to enroll: ");
-				fgets(middleInit, sizeof(middleInit), stdin);
-				if (!strchr(middleInit, '\n')) //if there is no return character in the string that means that it was overwritten and there are too many characters
+				printf("Please enter the middle name of the student you would like to enroll: ");
+				fgets(middleName, sizeof(middleName), stdin);
+				if (!strchr(middleName, '\n')) //if there is no return character in the string that means that it was overwritten and there are too many characters
 				{
 					printf("Too many characters!\n");
 					while (fgetc(stdin) != '\n'); // in this case keep reading all the input until there is a new line
@@ -106,7 +106,7 @@ int main(void)
 			//this loop checks to make sure the user inputs a good, null terminated string... Mainly to check if they didnt put too many characters which could overwrite the null terminator
 			while (goodStrInput == 0)
 			{
-				printf("Please enter the first name of the student you would like to enroll: ");
+				printf("Please enter the last name of the student you would like to enroll: ");
 				fgets(lastName, sizeof(lastName), stdin);
 				if (!strchr(lastName, '\n')) //if there is no return character in the string that means that it was overwritten and there are too many characters
 				{
@@ -118,16 +118,45 @@ int main(void)
 					goodStrInput = 1;
 				}
 			}
-			//Remove newline character from each name
-			if (strchr(firstName, '\n'))
+			for (int i = 0; i < MAX_BUFFER; i++)
 			{
-
+				//Remove newline characters from each name
+				if (*(firstName + i) == '\n')
+				{
+					*(firstName + i) = ' ';
+				}
+				if (*(middleName + i) == '\n')
+				{
+					*(middleName + i) = ' ';
+				}
+				if (*(lastName + i) == '\n')
+				{
+					*(lastName + i) = ' ';
+				}
 			}
-			
-
-		//	fputs(tempStudentStr, classRoster_ptr);
-		//	fputs(filler, classRoster_ptr);
-		//	fputs(tempUserNameStr, classRoster_ptr);
+			//initialiaze a variable to store the username array into
+			char userName[MAX_BUFFER + 3] = { 0 };
+			userName[0] = tolower(*(firstName)); //store the first character of the first name
+			userName[1] = tolower(*(middleName)); //store the first character of the middle name
+			int size = strlen(lastName);
+			//this loop stores the lastname into the userName 
+			for (int j = 0; j < size; j++)
+			{
+				
+				*(userName + j + 2) = *(lastName + j);
+				//makes sure the first letter is lowercase
+				if (j == 0)
+				{
+					*(userName + j + 2) = tolower(*(userName + j + 2));
+				}
+			}
+			//add all the text for this student into the file 
+			fputs(firstName, classRoster_ptr);
+			fputs(middleName, classRoster_ptr);
+			fputs(lastName, classRoster_ptr);
+			fputs(filler, classRoster_ptr);
+			fputs(userName, classRoster_ptr);
+			fputs("\n", classRoster_ptr);
 			
 		}
 	}
