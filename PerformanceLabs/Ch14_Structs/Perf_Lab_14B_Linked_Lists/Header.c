@@ -1,10 +1,13 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
 #include "Header.h"
 
 
-#define MAX_BUFFER 256
+#define MAX_BUFFER 64
+
 
 
 extern int print_menu(void)
@@ -159,9 +162,11 @@ extern int print_students_with_data(struct Student * head)
 */
 extern int print_one_student(struct Student * head)
 {
+	
 	//this loops through until the user chooses to exit therefor it being a while(1) is fine... 
 	while (1)
 	{
+	
 		int goodInput = 0;
 		struct Student * tempHead = head;
 		int studentToPrint = 0; //stores the number of the student ID the user wants to print
@@ -216,14 +221,61 @@ extern int print_one_student(struct Student * head)
 		//create functionality to look up the student by their name
 		else
 		{
-
 			return 1;
+			/*
+			int goodInput2 = 0;
+			char *userInput = (char*)malloc(sizeof(char)*MAX_BUFFER);
+			while (goodInput2 == 0)
+			{
+				printf("Enter the name of the student you would like to look up or 'EXIT' to return to the Main Menu: \n");
+
+				fgets(userInput, sizeof(userInput), stdin);
+				
+				if (!strchr(userInput, '\n'))
+				{
+					printf("Invalid Input!\n");
+					while (fgetc(stdin) != '\n');
+				}
+				
+				else
+				{
+					goodInput2 = 1;
+				}
+			}
+			//realloc(userInput, strlen(userInput));
+			//if the user types EXIT
+			if (strstr(userInput, "EXIT") != NULL)
+			{
+				free(userInput);
+				return 1;
+			}
+			while (tempHead != NULL)
+			{
+				//this if statement checks if the user input is contained in any of the names in the linked list
+				if (strstr(tempHead->name, userInput) != NULL)
+				{
+					printf("Student: %s \n", tempHead->name);
+					printf("\tStudent ID: %d \n", tempHead->studentID);
+					printf("\tInitials: %s\n", tempHead->initials);
+					printf("\tFavorite Artist: %s\n", tempHead->favArtists);
+					printf("\tDream Car: %s\n", tempHead->dreamCar);
+					printf("----------------------------------\n\n");
+					studentPrinted = 1;
+					tempHead = NULL;
+				}
+				else
+				{
+					tempHead = tempHead->next_student;
+				}
+			}
+			if (studentPrinted == 0)
+			{
+				printf("There is no student in the list with that name\n");
+			}
+			*/
 		}
 
 	}
-
-
-	return 1;
 }
 
 /*
@@ -235,13 +287,125 @@ extern int print_one_student(struct Student * head)
 * RETURNS:		1 on SUCCES
 *				0 on FAILURE (WILL NOT BE IMPLEMENTED IN THIS PROJECT!!!!
 *
-* NOTES:		This function adds a student to the linked list and then points thte head to that students memory address
+* NOTES:		This function adds a student to the linked list and then points the head to that students memory address
 *
 *
 */
-extern int add_student(struct Student * head)
+extern struct Student * add_student(struct Student * head)
 {
-	printf("This adds one student to the end of the linked list\n");
+	struct Student * tempHead = head;
+	int goodInput = 0;
+	int inputValue = 0;
+	//ask if the user would like to add a new student
+	while (goodInput == 0)
+	{
+		printf("Would you like to add a new student? Enter 1 for yes, 0 for No ");
+		char inputStr[5] = { 0 };
+
+		fgets(inputStr, sizeof(inputStr), stdin);
+		inputValue = atoi(inputStr);
+
+		if (!strchr(inputStr, '\n'))
+		{
+			printf("Invalid Input!\n");
+			while (fgetc(stdin) != '\n');
+		}
+		else if (inputValue < 0 || inputValue > 1)
+		{
+			printf("You must enter a number 1-100\n");
+		}
+		else
+		{
+			goodInput = 1;
+		}
+	}
+	//if they dont want to add a new student go back to main menu
+	if (inputValue == 0)
+	{
+		return head;
+	}
+	else
+	{
+		struct Student * newStudent = (struct Student*)malloc(sizeof(struct Student));
+		goodInput = 0;
+		//get the user's name
+		while (goodInput == 0)
+		{
+			char inputString[MAX_BUFFER];
+			printf("Enter the student's full name: ");
+			fgets(inputString, MAX_BUFFER, stdin);
+			if (!strchr(inputString, '\n'))
+			{
+				printf("Invalid Input!\n");
+				while (fgetc(stdin) != '\n');
+			}
+			else
+			{
+				goodInput = 1;
+			}
+
+			strcpy(newStudent->name, inputString);
+		}
+		goodInput = 0;
+		//get the user's initials
+		while (goodInput == 0)
+		{
+			printf("Enter the student's initials: ");
+			char inputString[MAX_BUFFER];
+			fgets(inputString, MAX_BUFFER, stdin);
+			if (!strchr(inputString, '\n'))
+			{
+				printf("Invalid Input!\n");
+				while (fgetc(stdin) != '\n');
+			}
+			else
+			{
+				goodInput = 1;
+			}
+			strcpy(newStudent->initials, inputString);
+		}
+		goodInput = 0;
+		//get the user's favorite artist
+		while (goodInput == 0)
+		{
+			printf("Enter the student's favorite artist: ");
+			char inputString[MAX_BUFFER];
+			fgets(inputString, MAX_BUFFER, stdin);
+			if (!strchr(inputString, '\n'))
+			{
+				printf("Invalid Input!\n");
+				while (fgetc(stdin) != '\n');
+			}
+			else
+			{
+				goodInput = 1;
+			}
+			strcpy(newStudent->favArtists, inputString);
+		}
+		goodInput = 0;
+		//get the user's dream car
+		while (goodInput == 0)
+		{
+			printf("Enter the student's Dream Car: ");
+			char inputString[MAX_BUFFER];
+			fgets(inputString, MAX_BUFFER, stdin);
+			if (!strchr(inputString, '\n'))
+			{
+				printf("Invalid Input!\n");
+				while (fgetc(stdin) != '\n');
+			}
+			else
+			{
+				goodInput = 1;
+			}
+			strcpy(newStudent->dreamCar, inputString);
+		}
+		newStudent->studentID = tempHead->studentID + 1;		//make sure the student's ID is the next ID number 
+		newStudent->next_student = tempHead;
+		head = newStudent;
+		return head;
+	}
+
 	return 1;
 }
 
