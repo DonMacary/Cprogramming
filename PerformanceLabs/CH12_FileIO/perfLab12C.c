@@ -1,8 +1,8 @@
 /********************************************************************************************************************
 /   AUTHOR: ELF
 /   COURSE: C Programming
-/   PROGRAM NAME: perfLab12B.c
-/   PROGRAM DESCRIPTION: Performance Lab 12B - Input Output
+/   PROGRAM NAME: perfLab12C.c
+/   PROGRAM DESCRIPTION: Performance Lab 12C - CONTENT COPY CHAR-BY-CHAR
 /   INSTRUCTIONS:
 	## PEFORMANCE LAB: CONTENT COPY CHAR-BY-CHAR
 

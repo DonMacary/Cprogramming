@@ -6,6 +6,7 @@
 /   INSTRUCTIONS:
 		Haystack Needle Lab
 
+
 		Purpose:
 		Remove the needle from the haystack
 		AKA: Move the substring from the string using memory operators and functions
@@ -54,6 +55,7 @@ Arguments:
 -needle   --- pointer to substring to search inside of haystack
 -buffer   --- pointer to a buffer
 
+
 PURPOSE:
 haystack_needle takes the arguments above and searches the haystack
 for the needle. Once it finds the needle... it removes it from the haystack.
@@ -81,4 +83,6 @@ int haystack_needle(char *haystack, char *needle, char *buffer)
 	memmove(mark_position, buffer, strlen(buffer) +1);
 
 	return 0;
+
 }
+

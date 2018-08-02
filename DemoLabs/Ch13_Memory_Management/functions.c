@@ -2,15 +2,16 @@
 /demonstration_labs/functions.c
 The purpose of this demo lab is to show off some functions that work on memory
 
+
 DEFINITIONS: (You should always have the documentation up for functions you do not know/or remember how they work)
 
 -strcpy(<char * destination>, <const char * source>)
     -Copies the C string pointed by <source> into the array pointed by <destination>, including the terminating null character
-
 -strcmp(<const char * str1>, <const char * str2>)
     -This function starts comparing the first character of each string.
     If they are equal to each other, it continues with the following
     pairs until the characters differ or until a terminating null-character is reached.
+
 
 -malloc(<size_t size>)
     -Allocates a block of <size> bytes of memory, returning a pointer to the beginning of the block.
@@ -130,4 +131,6 @@ int main(void)
     getchar();
     getchar();
     return 0;
+
 }
+

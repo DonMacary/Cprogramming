@@ -51,5 +51,18 @@
     * [Demo Lab 3 - By The Letter](./Ch11_Pointers_Arrays/by_the_letter.c)
     * [Demo Lab 4 - Battleship](./Ch11_Pointers_Arrays/battleship.c)
     * [Demo Lab 5 - Calculator - Function Pointers](./Ch11_Pointers_Arrays/fp_calculator.c)
-	
+* [Chapter 12 - File IO](./Ch12_FileIO)
+    * [Demo Lab 1 - File IO](./Ch12_FileIO/funk.c)
+* [Chapter 13 - Memory Management](./Ch13_Memory_Management)
+    * [Demo Lab 1 - Memory Management](./Ch13_Memory_Management/demo_lab1.c)
+    * [Demo Lab 2 - Memory Management](./Ch13_Memory_Management/demo_lab2.c)
+    * [Demo Lab 3 - Functions](./Ch13_Memory_Management/functions.c)
+* [Chapter 14 - Structs](./Ch14_Structs)
+    * [Demo Lab 1 - String Splitter](./Ch14_Structs/string_splitter)
+    * [Demo Lab 2 - Linked List Demo](./Ch14_Structs/ll_demo.c)
+    * [Demo Lab 3 - Linked List iterations](./Ch14_Structs/ll_iteration.c)
+    * [Demo lab 4 - Linked list new nodes](./Ch14_Structs/new_node.c)
+    * [Demo lab 5 - Linked List popping](./Ch14_Structs/popping_node.c)
+    * [Demo lab 6 - Linked list removing last](./Ch14_Structs/remove_last.c)
+    
 
