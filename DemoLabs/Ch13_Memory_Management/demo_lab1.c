@@ -18,6 +18,9 @@ int main(void)
 
     /* TODO Using malloc()... allocate a section of memory the sizeof int
     Set this memory block to type int. Set your int pointer to this malloc
+
+
+
     --In short, this allocates a section of memory that is the size of
     an integer... AKA 4 bytes. We then tell it that we will be storing an
     integer type within it using (int *). Thus, we can store one integer within
@@ -49,4 +52,6 @@ int main(void)
 
     return 0;
 
+
 }
+
