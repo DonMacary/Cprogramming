@@ -5,10 +5,7 @@
 #include <stdlib.h>
 #include "Header.h"
 
-
 #define MAX_BUFFER 64
-
-
 
 extern int print_menu(void)
 {
@@ -43,11 +40,11 @@ extern int print_all_students(struct Student * head)
 	printf("This prints all of the students!\n");
 	while (tempHead != NULL)
 	{
-		printf("Student: %s \n", tempHead->name);
+		printf("Student: %s ", tempHead->name);
 		printf("\tStudent ID: %d \n", tempHead->studentID);
-		printf("\tInitials: %s\n", tempHead->initials);
-		printf("\tFavorite Artist: %s\n", tempHead->favArtists);
-		printf("\tDream Car: %s\n", tempHead->dreamCar);
+		printf("\tInitials: %s", tempHead->initials);
+		printf("\tFavorite Artist: %s", tempHead->favArtists);
+		printf("\tDream Car: %s", tempHead->dreamCar);
 		printf("----------------------------------\n\n");
 		tempHead = tempHead->next_student;
 	}
@@ -111,7 +108,7 @@ extern int print_students_with_data(struct Student * head)
 		while (tempHead != NULL)
 		{
 			printf("\n----------------------------------\n");
-			printf("Student: %s\n", tempHead->name);
+			printf("Student: %s", tempHead->name);
 			switch (dataChoice)
 			{
 			case 1:
@@ -119,15 +116,15 @@ extern int print_students_with_data(struct Student * head)
 				tempHead = tempHead->next_student;
 				break;
 			case 2:
-				printf("\tInitials: %s\n", tempHead->initials);
+				printf("\tInitials: %s", tempHead->initials);
 				tempHead = tempHead->next_student;
 				break;
 			case 3:
-				printf("\tFavorite Artist: %s\n", tempHead->favArtists);
+				printf("\tFavorite Artist: %s", tempHead->favArtists);
 				tempHead = tempHead->next_student;
 				break;
 			case 4:
-				printf("\tDream Car %s \n", tempHead->dreamCar);
+				printf("\tDream Car %s ", tempHead->dreamCar);
 				tempHead = tempHead->next_student;
 				break;
 			case 5:
@@ -199,11 +196,11 @@ extern int print_one_student(struct Student * head)
 			{
 				if (tempHead->studentID == studentToPrint)
 				{
-					printf("Student: %s \n", tempHead->name);
+					printf("Student: %s ", tempHead->name);
 					printf("\tStudent ID: %d \n", tempHead->studentID);
-					printf("\tInitials: %s\n", tempHead->initials);
-					printf("\tFavorite Artist: %s\n", tempHead->favArtists);
-					printf("\tDream Car: %s\n", tempHead->dreamCar);
+					printf("\tInitials: %s", tempHead->initials);
+					printf("\tFavorite Artist: %s", tempHead->favArtists);
+					printf("\tDream Car: %s", tempHead->dreamCar);
 					printf("----------------------------------\n\n");
 					studentPrinted = 1;
 					tempHead = NULL;
@@ -331,7 +328,7 @@ extern struct Student * add_student(struct Student * head)
 		//get the user's name
 		while (goodInput == 0)
 		{
-			char inputString[MAX_BUFFER];
+			char inputString[MAX_BUFFER] = { 0 };
 			printf("Enter the student's full name: ");
 			fgets(inputString, MAX_BUFFER, stdin);
 			if (!strchr(inputString, '\n'))
@@ -351,7 +348,7 @@ extern struct Student * add_student(struct Student * head)
 		while (goodInput == 0)
 		{
 			printf("Enter the student's initials: ");
-			char inputString[MAX_BUFFER];
+			char inputString[MAX_BUFFER] = { 0 };
 			fgets(inputString, MAX_BUFFER, stdin);
 			if (!strchr(inputString, '\n'))
 			{
@@ -369,7 +366,7 @@ extern struct Student * add_student(struct Student * head)
 		while (goodInput == 0)
 		{
 			printf("Enter the student's favorite artist: ");
-			char inputString[MAX_BUFFER];
+			char inputString[MAX_BUFFER] = { 0 };
 			fgets(inputString, MAX_BUFFER, stdin);
 			if (!strchr(inputString, '\n'))
 			{
@@ -387,7 +384,7 @@ extern struct Student * add_student(struct Student * head)
 		while (goodInput == 0)
 		{
 			printf("Enter the student's Dream Car: ");
-			char inputString[MAX_BUFFER];
+			char inputString[MAX_BUFFER] = { 0 };
 			fgets(inputString, MAX_BUFFER, stdin);
 			if (!strchr(inputString, '\n'))
 			{
@@ -401,12 +398,10 @@ extern struct Student * add_student(struct Student * head)
 			strcpy(newStudent->dreamCar, inputString);
 		}
 		newStudent->studentID = tempHead->studentID + 1;		//make sure the student's ID is the next ID number 
-		newStudent->next_student = tempHead;
-		head = newStudent;
+		newStudent->next_student = tempHead;					//make the next student = to the current head
+		head = newStudent;										//make the new student the current head
 		return head;
 	}
-
-	return 1;
 }
 
 /*
@@ -422,10 +417,66 @@ extern struct Student * add_student(struct Student * head)
 *
 *
 */
-extern int remove_last_student(struct Student * head)
+extern struct Student * remove_last_student(struct Student * head)
 {
-	printf("This removes the last student from the list!\n");
-	return 1;
+	struct Student * tempHead = head;
+
+	int goodInput = 0;
+	int inputValue = 0;
+	//ask if the user would like to add a new student
+	while (goodInput == 0)
+	{
+		printf("Would you like to remove the last student? Enter 1 for yes, 0 for No ");
+		char inputStr[5] = { 0 };
+
+		fgets(inputStr, sizeof(inputStr), stdin);
+		inputValue = atoi(inputStr);
+
+		if (!strchr(inputStr, '\n'))
+		{
+			printf("Invalid Input!\n");
+			while (fgetc(stdin) != '\n');
+		}
+		else if (inputValue < 0 || inputValue > 1)
+		{
+			printf("You must enter a number 1-100\n");
+		}
+		else
+		{
+			goodInput = 1;
+		}
+	}
+	//if they dont want to remove the last student go back to main menu
+	if (inputValue == 0)
+	{
+		return head;
+	}
+	//otherwise -> remove the head and set the next student to be the head
+	else
+	{
+		//if the current head is null then there is nothing left to remove and print an error!
+		if (head->studentID == NULL )
+		{
+			printf("These users are base users and cannot be deleted\n");
+			return head;
+		}
+		else
+		{
+			head = head->next_student;	//set the head to the next element
+			//nullify all the data in the current head
+			printf("Removing student %s", tempHead->name);
+			strcpy(tempHead->name, "\0");	
+			tempHead->studentID = NULL;
+			strcpy(tempHead->initials, "\0");
+			strcpy(tempHead->favArtists, "\0");
+			strcpy(tempHead->dreamCar, "\0");
+			tempHead->next_student = NULL;
+			//free(tempHead);	//free the tempHead
+			return head;	//return the head (because its pointing to the next student now
+
+		}
+	}
+		
 }
 
 /*
@@ -441,11 +492,93 @@ extern int remove_last_student(struct Student * head)
 *
 *
 */
-extern int remove_specific_student(struct Student * head)
+extern struct Student * remove_specific_student(struct Student * head)
 {
+	while (1)
+	{
+		struct Student * tempHead = head;
+		int goodInput = 0;
+		int studentToRemove = 0; //stores the number of the student ID the user wants to remove
+		int studentRemoved = 0; //value for whether or not a student was removed - if 0 then there wasnt if !0 then he was
+								//ask if the user would like to add a new student
+		while (goodInput == 0)
+		{
+			printf("Enter the Student ID of the student you would like to print, if you do not know their ID enter 0 to look up by name or exit ");
+			char inputStr[5] = { 0 };
 
-	printf("This removes a specific student from the list!\n");
-	return 1;
+			fgets(inputStr, sizeof(inputStr), stdin);
+			studentToRemove = atoi(inputStr);
+
+			if (!strchr(inputStr, '\n'))
+			{
+				printf("Invalid Input!\n");
+				while (fgetc(stdin) != '\n');
+			}
+			else if (studentToRemove < 0 || studentToRemove > 100)
+			{
+				printf("You must enter a number 1-100\n");
+			}
+			else
+			{
+				goodInput = 1;
+			}
+		}
+		//if they dont want remove a specific student go back to main menu
+		if (studentToRemove == 0)
+		{
+			return head;
+		}
+		//otherwise find the student they want to remove and remove him
+		else
+		{
+			//if the student they want to remove is the current head then use the remove last student function
+			if (head->studentID == studentToRemove)
+			{
+				head = remove_last_student(head);
+				return head;
+			}
+			//otherwise find the student the want to remove and remove him
+			else
+			{
+				while (tempHead != NULL)
+				{
+					//if we find the student we want to remove
+					if (tempHead->studentID == studentToRemove)
+					{
+						struct Student * removeThisStudent = tempHead;	//set a new struct variable to the next student which is the one we want to remove
+						tempHead = head; //reset our linked list back to the beginning
+						printf("Removing student %s", removeThisStudent->name);
+						//loop through the list again until the next student is equal to the student we want to remove
+						while (tempHead->next_student != removeThisStudent)
+						{
+							tempHead = tempHead->next_student;
+						}
+						//set the current student's next student = the student we want to removes next student
+						tempHead->next_student = removeThisStudent->next_student;
+						//NULLIFY everything in the student we want to remove
+						strcpy(removeThisStudent->name, "\0");
+						removeThisStudent->studentID = NULL;
+						strcpy(removeThisStudent->initials, "\0");
+						strcpy(removeThisStudent->favArtists, "\0");
+						strcpy(removeThisStudent->dreamCar, "\0");
+						removeThisStudent->next_student = NULL;
+						studentRemoved = 1;
+						return head;
+					}
+					else
+					{
+						tempHead = tempHead->next_student;
+					}
+
+				}
+				if (studentRemoved == 0)
+				{
+					printf("There was no student with this ID in the list\n");
+				}
+			}
+		}
+	}
+
 }
 
 
