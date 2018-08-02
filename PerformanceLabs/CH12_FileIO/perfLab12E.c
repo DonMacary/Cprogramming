@@ -2,7 +2,7 @@
 /   AUTHOR: ELF
 /   COURSE: C Programming
 /   PROGRAM NAME: perfLab12E.c
-/   PROGRAM DESCRIPTION: Performance Lab 12E - Input Output
+/   PROGRAM DESCRIPTION: Performance Lab 12E - USERNAMES
 /   INSTRUCTIONS:
 		## PERFORMANCE LAB: USERNAMES
 

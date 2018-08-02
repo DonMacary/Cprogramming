@@ -2,7 +2,7 @@
 /   AUTHOR: ELF
 /   COURSE: C Programming
 /   PROGRAM NAME: perfLab12A.c
-/   PROGRAM DESCRIPTION: Performance Lab 12A - Input Output
+/   PROGRAM DESCRIPTION: Performance Lab 12A - MIGHTY MORHPIN'
 /   INSTRUCTIONS:
 		## PERORMANCE LAB: MIGHTY MORHPIN'
 
