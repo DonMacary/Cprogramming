@@ -63,3 +63,6 @@
 * [Chapter 14 - Structs](./Ch14_Structs)
     * [Performance lab 1 - Structs](./Ch14_Structs/Perf_Lab_14A_Structs/)
     * [Performance lab 2 - Linked Lists](./Ch14_Structs/Perf_Lab_14B_Linked_Lists/)
+* [Random](./Random)
+    * [Optimization Example](./Random/Optimization.c)
+    * [Iteration without loops or ifs](./Random/iterate_without_loops_or_ifs.c)

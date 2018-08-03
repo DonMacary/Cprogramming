@@ -64,6 +64,9 @@
   * [Chapter 14 - Structs](./PerformanceLabs/Ch14_Structs)
     * [Performance lab 1 - Structs](./PerformanceLabs/Ch14_Structs/Perf_Lab_14A_Structs/)
     * [Performance lab 2 - Linked Lists](./PerformanceLabs/Ch14_Structs/Perf_Lab_14B_Linked_Lists/)
+  * [Random](./PerformanceLabs/Random)
+    * [Optimization Example](./PerformanceLabs/Random/Optimization.c)
+    * [Iteration without loops or ifs](./PerformanceLabs/Random/iterate_without_loops_or_ifs.c)
 
 * [**Demolabs**](./DemoLabs/)
   * [Chapter 02 - Variables](./DemoLabs/Ch02)
