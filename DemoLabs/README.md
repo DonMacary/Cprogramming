@@ -63,6 +63,8 @@
     * [Demo Lab 3 - Linked List iterations](./Ch14_Structs/ll_iteration.c)
     * [Demo lab 4 - Linked list new nodes](./Ch14_Structs/new_node.c)
     * [Demo lab 5 - Linked List popping](./Ch14_Structs/popping_node.c)
-    * [Demo lab 6 - Linked list removing last](./Ch14_Structs/remove_last.c)
-    
+    * [Demo lab 6 - Linked list removing last](./Ch14_Structs/remove_last.c) 
+* [Chapter 15 - Error Handling](./Ch15_Error_Handling)
+    * [Demo Lab 1 - Assert](./Ch15_Error_Handling/demo_lab1.c)
+    * [Demo Lab 2 - Errno](./Ch15_Error_Handling/demo_lab2.c)    
 
