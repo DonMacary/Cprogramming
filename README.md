@@ -71,6 +71,7 @@
       * [Incrementing Without using Loops](./PerformanceLabs/Random/increment_without_loops.c)
       * [Optimization](./PerformanceLabs/Random/Optimization.c)
 
+
 * [**Demolabs**](./DemoLabs/)
   * [Chapter 02 - Variables](./DemoLabs/Ch02)
     * [DLab1 - Variables/Data Types](./DemoLabs/Ch02/DLab1.c)

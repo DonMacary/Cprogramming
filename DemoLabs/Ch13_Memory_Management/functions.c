@@ -1,21 +1,29 @@
 /*
 /demonstration_labs/functions.c
 The purpose of this demo lab is to show off some functions that work on memory
+
+
 DEFINITIONS: (You should always have the documentation up for functions you do not know/or remember how they work)
+
 -strcpy(<char * destination>, <const char * source>)
     -Copies the C string pointed by <source> into the array pointed by <destination>, including the terminating null character
 -strcmp(<const char * str1>, <const char * str2>)
     -This function starts comparing the first character of each string.
     If they are equal to each other, it continues with the following
     pairs until the characters differ or until a terminating null-character is reached.
+
+
 -malloc(<size_t size>)
     -Allocates a block of <size> bytes of memory, returning a pointer to the beginning of the block.
+
 -memmove( <void * destination>, <const void * source>, <size_t num> )
     -Copies the values of <num> bytes from the location pointed by <source> to the memory block pointed by <destination>.
     Copying takes place as if an intermediate buffer were used, allowing the destination and source to overlap.
+
 -memcpy( <void * destination>, <const void * source>, <size_t num> )
     -Copies the values of <num> bytes from the location pointed
     to by <source> directly to the memory block pointed to by <destination>.
+
 -strstr(const char * str1, const char * str2)
     -Returns a pointer to the first occurrence of str2 in str1, or a null pointer if str2 is not part of str1.
 */
@@ -123,4 +131,6 @@ int main(void)
     getchar();
     getchar();
     return 0;
+
 }
+
