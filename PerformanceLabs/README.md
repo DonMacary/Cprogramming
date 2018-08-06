@@ -63,6 +63,10 @@
 * [Chapter 14 - Structs](./Ch14_Structs)
     * [Performance lab 1 - Structs](./Ch14_Structs/Perf_Lab_14A_Structs/)
     * [Performance lab 2 - Linked Lists](./Ch14_Structs/Perf_Lab_14B_Linked_Lists/)
+* [Chapter 15 - Error Handling](./Ch15_Error_Handling)
+    * [Performance Lab 1 - Assert](./Ch15_Error_Handling/perfLab15A.c)
+    * [Performance Lab 2 - Errno](./Ch15_Error_Handling/perfLab15B.c)
 * [Random](./Random)
-    * [Optimization Example](./Random/Optimization.c)
-    * [Iteration without loops or ifs](./Random/iterate_without_loops_or_ifs.c)
+    * [Incrementing Without using Loops](./Random/increment_without_loops.c)
+    * [Optimization](./Random/Optimization.c)
+

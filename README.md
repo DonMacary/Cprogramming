@@ -64,9 +64,13 @@
   * [Chapter 14 - Structs](./PerformanceLabs/Ch14_Structs)
     * [Performance lab 1 - Structs](./PerformanceLabs/Ch14_Structs/Perf_Lab_14A_Structs/)
     * [Performance lab 2 - Linked Lists](./PerformanceLabs/Ch14_Structs/Perf_Lab_14B_Linked_Lists/)
+  * [Chapter 15 - Error Handling](./PerformanceLabs/Ch15_Error_Handling)
+    * [Performance Lab 1 - Assert](./PerformanceLabs/Ch15_Error_Handling/perfLab15A.c)
+    * [Performance Lab 2 - Errno](./PerformanceLabs/Ch15_Error_Handling/perfLab15B.c)
   * [Random](./PerformanceLabs/Random)
-    * [Optimization Example](./PerformanceLabs/Random/Optimization.c)
-    * [Iteration without loops or ifs](./PerformanceLabs/Random/iterate_without_loops_or_ifs.c)
+      * [Incrementing Without using Loops](./PerformanceLabs/Random/increment_without_loops.c)
+      * [Optimization](./PerformanceLabs/Random/Optimization.c)
+
 
 * [**Demolabs**](./DemoLabs/)
   * [Chapter 02 - Variables](./DemoLabs/Ch02)
@@ -131,6 +135,10 @@
     * [Demo lab 4 - Linked list new nodes](./DemoLabs/Ch14_Structs/new_node.c)
     * [Demo lab 5 - Linked List popping](./DemoLabs/Ch14_Structs/popping_node.c)
     * [Demo lab 6 - Linked list removing last](./DemoLabs/Ch14_Structs/remove_last.c)
+  * [Chapter 15 - Error Handling](./DemoLabs/Ch15_Error_Handling)
+    * [Demo Lab 1 - Assert](./DemoLabs/Ch15_Error_Handling/demo_lab1.c)
+    * [Demo Lab 2 - Errno](./DemoLabs/Ch15_Error_Handling/demo_lab2.c)    
+
 
 * [**MidTerm Review Lab**](./Midterm_Review/)
   * [Header File](./Midterm_Review/EnglishFunctions.h)
